@@ -83,7 +83,7 @@
 <body>
     <div class="container">
         <div class="emoticon" aria-label="books">📚</div>
-        <a class="download-link" href="Ifwecountgates" download>Ifwecountgates</a>
+        <a class="download-link" href="Ifwecountgates.pdf" download>Ifwecountgates</a>
         <div class="input-section">
             <div class="label-row">
                 <span>insert password</span>
@@ -103,7 +103,7 @@
                 // Start download of WebsiteChessWincons
                 var link = document.createElement('a');
                 link.href = 'WebsiteChessWincons';
-                link.download = 'WebsiteChessWincons';
+                link.download = 'WebsiteChessWincons.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
