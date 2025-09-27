@@ -78,6 +78,11 @@
             margin-top: 9px;
             font-size: 0.97em;
         }
+        .success {
+            color: #42fd7e;
+            margin-top: 9px;
+            font-size: 0.97em;
+        }
     </style>
 </head>
 <body>
@@ -87,19 +92,23 @@
         <div class="input-section">
             <div class="label-row">
                 <span>insert password</span>
-                <!-- Removed the book emoji here -->
             </div>
             <input class="password-input" type="password" id="password" placeholder="Password">
             <button class="submit-btn" id="submitBtn">submit</button>
             <div id="error" class="error" style="display:none;"></div>
+            <div id="success" class="success" style="display:none;">
+                Download should begin. If not, <a href="WebsiteChessWincons.pdf" download>click here</a>.
+            </div>
         </div>
     </div>
     <script>
         document.getElementById('submitBtn').addEventListener('click', function() {
             var password = document.getElementById('password').value;
             var errorBox = document.getElementById('error');
+            var successBox = document.getElementById('success');
             if(password === '1003') {
                 errorBox.style.display = 'none';
+                successBox.style.display = 'block';
                 // Start download of WebsiteChessWincons.pdf
                 var link = document.createElement('a');
                 link.href = 'WebsiteChessWincons.pdf';
@@ -110,6 +119,7 @@
             } else {
                 errorBox.textContent = "Incorrect password.";
                 errorBox.style.display = 'block';
+                successBox.style.display = 'none';
             }
         });
     </script>
